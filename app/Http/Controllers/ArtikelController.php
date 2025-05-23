@@ -43,11 +43,12 @@ class ArtikelController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-    {
-        $artikel = Artikel::all();
-        $artikelDetail = Artikel::findOrFail($id);
-        return view('artikel.index', compact('artikel','artikelDetail'));
-    }
+{
+    $artikel = Artikel::all();
+    $artikelDetail = Artikel::findOrFail($id);
+    return view('artikel.index', compact('artikel','artikelDetail'));
+}
+
 
     /**
      * Update the specified resource in storage.
