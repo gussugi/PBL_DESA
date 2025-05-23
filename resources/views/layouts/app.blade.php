@@ -21,22 +21,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('home') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('berita') }}">Berita</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('produk') }}">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('informasi') }}">Informasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
-                    </li>
-                </ul>
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('berita') ? 'active' : '' }}" href="{{ route('berita') }}">Berita</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('produk') ? 'active' : '' }}" href="{{ route('produk') }}">Produk</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('informasi') ? 'active' : '' }}" href="{{ route('informasi') }}">Informasi</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">login</a>
+    </li>
+</ul>
+
             </div>
         </div>
     </nav>
@@ -112,109 +113,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Perangkat Desa Section -->
-        <section id="perangkat" class="py-5 mb-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-title">Perangkat Desa</h2>
-                    <p class="lead">Kenali tim yang mengelola pemerintahan desa kami</p>
-                </div>
-                
-                <div class="row justify-content-center">
-                    <!-- Anggota 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Asep Saefullah</h5>
-                                <p class="text-muted small">Kepala Desa</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Anggota 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Aulia Naresti</h5>
-                                <p class="text-muted small">Sekretaris Desa</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Anggota 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Nabila Aminatun</h5>
-                                <p class="text-muted small">Bendahara Desa</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Anggota 4 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Bintang Shallahudin</h5>
-                                <p class="text-muted small">Kasi Pemerintahan</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Anggota 5 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">David Aditya</h5>
-                                <p class="text-muted small">Kasi Kesejahteraan</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Anggota 6 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-img-top team-img" style="background-image: url('https://via.placeholder.com/400x400');"></div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Daffa Hafid</h5>
-                                <p class="text-muted small">Kasi Pelayanan</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="#" class="btn btn-sm btn-outline-secondary mx-1"><i class="bi bi-envelope"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="bi bi-telephone"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section>   
 
         @yield('content')
     </main>
@@ -242,7 +141,7 @@
                         <li><a href="{{ route('berita') }}" class="text-white">Berita</a></li>
                         <li><a href="{{ route('produk') }}" class="text-white">Produk</a></li>
                         <li><a href="{{ route('informasi') }}" class="text-white">Informasi</a></li>
-                        <li><a href="{{ route('kontak') }}" class="text-white">Kontak</a></li>
+                        <li><a href="{{ route('login') }}" class="text-white">Login</a></li>
                     </ul>
                 </div>
             </div>

@@ -13,9 +13,10 @@ class DesaController extends Controller
 
     public function berita()
     {
-        // Anda bisa menambahkan logika untuk mengambil data berita dari database di sini
-        return view('berita');
+    return view('user.berita');
     }
+
+
 
     public function produk()
     {
@@ -23,13 +24,41 @@ class DesaController extends Controller
         return view('produk');
     }
 
-    public function kontak()
-    {
-        return view('kontak');
-    }
-
     public function informasi()
     {
         return view('informasi');
+    }
+
+    // Tampilkan form login
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+
+    // Proses login
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Desa::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/home'); // arahkan ke dashboard atau halaman utama
+        }
+
+        return back()->withErrors([
+            'email' => 'Email atau password salah.',
+        ])->onlyInput('email');
+    }
+
+    // Logout
+    public function logout(Request $request)
+    {
+        Desa::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 }

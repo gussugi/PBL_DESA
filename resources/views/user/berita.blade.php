@@ -5,26 +5,26 @@
 @section('content')
 <div class="container">
     <h1 class="text-center mb-4">Berita Desa</h1>
-    
-    <div class="row">
+    <!-- Konten berita di sini -->
+</div>
+
+    <div class="row gx-4 gy-4">
         @for($i = 1; $i <= 6; $i++)
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Berita {{ $i }}">
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <img src="https://via.placeholder.com/600x300?text=Berita+{{ $i }}" class="card-img-top" alt="Berita {{ $i }}">
                 <div class="card-body">
-                    <h5 class="card-title">Judul Berita {{ $i }}</h5>
-                    <p class="card-text">Deskripsi singkat berita {{ $i }}. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
-                </div>
-                <div class="card-footer text-muted">
-                    Diposting pada {{ date('d M Y') }}
+                    <small class="text-muted">{{ date('d M Y') }}</small>
+                    <h4 class="card-title mt-2">Judul Berita {{ $i }}</h4>
+                    <p class="card-text text-secondary">Deskripsi singkat berita {{ $i }}. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
                 </div>
             </div>
         </div>
         @endfor
     </div>
-    
-    <nav aria-label="Page navigation">
+
+    <nav aria-label="Page navigation" class="mt-5">
         <ul class="pagination justify-content-center">
             <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">Previous</a>
