@@ -22,13 +22,13 @@ class ArtikelController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'judul'=>'required|min:3',
-            'jurnalis'=>'required|min:3',
-            'deskripsi'=>'required|min:3',
-            'tanggal_terbit'=>'required'
+            'judul' => 'required|min:3',
+            'jurnalis' => 'required|min:3',
+            'deskripsi' => 'required|min:3',
+            'tanggal_terbit' => 'required'
         ]);
         Artikel::create($validated);
-        return redirect()->route('artikel.index')->with('success','Artikel Berhasil Ditambahkan');
+        return redirect()->route('artikel.index')->with('success', 'Artikel Berhasil Ditambahkan');
     }
 
     /**
@@ -43,11 +43,11 @@ class ArtikelController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-{
-    $artikel = Artikel::all();
-    $artikelDetail = Artikel::findOrFail($id);
-    return view('artikel.index', compact('artikel','artikelDetail'));
-}
+    {
+        $artikel = Artikel::all();
+        $artikelDetail = Artikel::findOrFail($id);
+        return view('artikel.index', compact('artikel', 'artikelDetail'));
+    }
 
 
     /**
@@ -56,13 +56,13 @@ class ArtikelController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'judul'=>'required|min:3',
-            'jurnalis'=>'required|min:3',
-            'deskripsi'=>'required|min:3',
-            'tanggal_terbit'=>'required'
+            'judul' => 'required|min:3',
+            'jurnalis' => 'required|min:3',
+            'deskripsi' => 'required|min:3',
+            'tanggal_terbit' => 'required'
         ]);
-        Artikel::where('id', $id)-> update($validated);
-        return redirect()->route('artikel.index')->with('success','Artikel Berhasil Diperbarui');
+        Artikel::where('id', $id)->update($validated);
+        return redirect()->route('artikel.index')->with('success', 'Artikel Berhasil Diperbarui');
     }
 
     /**
@@ -72,7 +72,6 @@ class ArtikelController extends Controller
     {
         $artikelDetail = Artikel::findOrFail($id);
         $artikelDetail->delete();
-        return redirect()->route('artikel.index')->with('success','Artikel Berhasil Dihapus');
-
+        return redirect()->route('artikel.index')->with('success', 'Artikel Berhasil Dihapus');
     }
 }
