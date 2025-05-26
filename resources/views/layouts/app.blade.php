@@ -25,7 +25,7 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('berita') }}">Berita</a>
+                        <a class="nav-link" href="{{ route('artikel.index') }}">Berita</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('produk') }}">Produk</a>
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="{{ route('informasi') }}">Informasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+                        <a class="nav-link" href="{{ route('cetak.index') }}">Dokumen</a>
                     </li>
                 </ul>
             </div>

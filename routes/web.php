@@ -1,31 +1,19 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\DesaController;
 use App\Http\Controllers\CetakPDF_Controller;
->>>>>>> 7083ae7 (menambahkan cetak pdf)
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DesaController;
-use App\Http\Controllers\CetakPDF_Controller;
 
 // view frondtend
 Route::get('/admin/dashboard', function () {
     return view('home');
 })->name('admin.dashboard');
 
-
-
-Route::get('/login', [DesaController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [DesaController::class, 'login']);
-Route::post('/logout', [DesaController::class, 'logout'])->name('logout');
-
->>>>>>> 7083ae7 (menambahkan cetak pdf)
 Route::get('/', [DesaController::class, 'home'])->name('home');
 Route::get('/berita', [DesaController::class, 'berita'])->name('berita');
-Route::get('/produk', [DesaController::class, 'produk'])->name('produk');
 Route::get('/kontak', [DesaController::class, 'kontak'])->name('kontak');
+Route::get('/produk', [DesaController::class, 'produk'])->name('produk');
 Route::get('/informasi', [DesaController::class, 'informasi'])->name('informasi');
 
 // CRUD artikel
