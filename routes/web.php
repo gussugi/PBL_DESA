@@ -8,22 +8,17 @@ use Illuminate\Support\Facades\Route;
 // view frondtend
 Route::get('/admin/dashboard', function () {
     return view('home');
-})->name('admin.dashboard');
+})->name('web.dashboard');
 
 Route::get('/', [DesaController::class, 'home'])->name('home');
 Route::get('/berita', [DesaController::class, 'berita'])->name('berita');
 Route::get('/kontak', [DesaController::class, 'kontak'])->name('kontak');
-Route::get('/produk', [DesaController::class, 'produk'])->name('produk');
 Route::get('/informasi', [DesaController::class, 'informasi'])->name('informasi');
 
 // CRUD artikel
 Route::get('/login', [DesaController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [DesaController::class, 'login']);
 Route::post('/logout', [DesaController::class, 'logout'])->name('logout');
-
-
-Route::get('/', [DesaController::class, 'home'])->name('home');
-Route::get('/berita', [DesaController::class, 'berita'])->name('berita'); 
 
 Route::get('/produk', [DesaController::class, 'produk'])->name('produk');
 Route::get('/informasi', [DesaController::class, 'informasi'])->name('informasi');

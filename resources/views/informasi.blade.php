@@ -11,7 +11,7 @@
                     <h2 class="section-title">Perangkat Desa</h2>
                     <p class="lead">Kenali tim yang mengelola pemerintahan desa kami</p>
                 </div>
-                
+
                 <div class="row justify-content-center">
                     <!-- Anggota 1 -->
                     <div class="col-lg-4 col-md-6 mb-4">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Anggota 2 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Anggota 3 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Anggota 4 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Anggota 5 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Anggota 6 -->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card border-0 shadow-sm h-100">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </section>
-    
+
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="card h-100">
@@ -123,7 +123,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-6 mb-4">
             <div class="card h-100">
                 <div class="card-header bg-info text-white">
@@ -140,7 +140,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-12 mb-4">
             <div class="card">
                 <div class="card-header bg-info text-white">
@@ -149,7 +149,7 @@
                 <div class="card-body">
                     <h6>Visi:</h6>
                     <p>"Mewujudkan Desa Kita yang mandiri, sejahtera, dan berbudaya melalui pemberdayaan masyarakat berbasis potensi lokal."</p>
-                    
+
                     <h6 class="mt-3">Misi:</h6>
                     <ol>
                         <li>Meningkatkan kualitas sumber daya manusia</li>
